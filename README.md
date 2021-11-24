@@ -1,10 +1,10 @@
-## Meetup-app 
+# Meetup-app 
 
 I have build a serverless, progressive web application (PWA) with React using a
 test-driven development (TDD) technique. The application uses the Google
 Calendar API to fetch upcoming events.
 
-# Features, user stories and scenario’s
+## Features, user stories and scenario’s
 
 FEATURE 1: FILTER EVENTS BY CITY
 As a user, I should be able to “filter events by city”, so that I can see the list of events that take place in that city
