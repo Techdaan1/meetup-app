@@ -4,13 +4,12 @@ provider:
   name: aws
   runtime: nodejs12.x
   region: eu-central-1
-  timeout: 60
-
-environment:
-  CLIENT_ID: 142127699156-gmvmvnd32dso2nokccchd3ugb4ohoba1.apps.googleusercontent.com
-  CLIENT_SECRET: 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
-  PROJECT_ID: meet-app-334009
-  CALENDAR_ID: fullstackwebdev@careerfoundry.com
+  timeout: 60 
+    environment:
+    CLIENT_ID: ${file(config.json):CLIENT_ID}
+    CLIENT_SECRET: ${file(config.json):CLIENT_SECRET}
+    PROJECT_ID: ${file(config.json):PROJECT_ID}
+    CALENDAR_ID: ${file(config.json):CALENDAR_ID}
 functions:
   getAuthURL:
     handler: handler.getAuthURL
