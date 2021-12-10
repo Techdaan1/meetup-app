@@ -2,10 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta http-equiv="x-ua-compatible" content="ie-edge" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <title>Test Auth Server</title>
   </head>
+
   <body>
     <style>
       #container {
@@ -15,17 +17,20 @@
         margin-top: 25px;
       }
     </style>
+
     <main id="container">
       <h1>OAuth2 Test</h1>
-      <h4><b>Step 1:</b> Get the Auth URL</h4>
-      <p>Click the button below to get your auth url.</p>
+      <h4><b>Step 1:</b> Get OAuth URL</h4>
+      <p>Click the button below to get your OAuth URL.</p>
       <button id="getCode">Get OAuth URL</button>
       <p id="result"></p>
-      <a id="authURL" href target="_blank">Click link to authorise</a>
+      <a id="authURL" href target="_blank">Click to authorize</a>
     </main>
     <script type="text/javascript">
       const getCodeElement = document.getElementById("getCode");
-      const resultLink = document.getElementById("result");
+      const resultElement = document.getElementById("result");
+      const resultLink = document.getElementById("authURL");
+      // Replace this with your own endpoint
       const getAuthURL =
         "https://mlzydonigl.execute-api.eu-central-1.amazonaws.com/dev/api/get-auth-url";
 
