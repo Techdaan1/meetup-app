@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Test Auth Server</title>
   </head>
 
@@ -13,6 +12,7 @@
       #container {
         max-width: 500px;
       }
+
       h4 {
         margin-top: 25px;
       }
@@ -20,21 +20,26 @@
 
     <main id="container">
       <h1>OAuth2 Test</h1>
-      <h4><b>Step 1:</b> Get OAuth URL</h4>
-      <p>Click the button below to get your OAuth URL.</p>
+      <h4><b>Step 1:</b>Get the Auth URL</h4>
+      <p>Click the button below to get your auth url.</p>
       <button id="getCode">Get OAuth URL</button>
       <p id="result"></p>
-      <a id="authURL" href target="_blank">Click to authorize</a>
+      <a id="authURL" href target="_blank">Click to Authorize</a>
+
       <h4><b>Step 2:</b> Get your code and exchange for an access token</h4>
       <p>
-        After you're redirected back to your Meet app on GitHub, copy the code
-        from the URI
+        After you're redirected back to your Meet app on Github, copy the code
+        from the URI.
       </p>
       <br />
-      <label>Code input<input id="code" type="text" value="" /></label>
+      <label
+        >Code input
+        <input id="code" type="text" value="" />
+      </label>
       <button id="getToken">Get Token</button>
       <p id="accessToken"></p>
     </main>
+
     <script type="text/javascript">
       const getCodeElement = document.getElementById("getCode");
       const resultElement = document.getElementById("result");
