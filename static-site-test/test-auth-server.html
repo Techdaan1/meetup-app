@@ -36,13 +36,13 @@
       <p id="accessToken"></p>
     </main>
     <script type="text/javascript">
-      const getURLElement = document.getElementById("getURL");
+      const getCodeElement = document.getElementById("getCode");
       const resultElement = document.getElementById("result");
       const resultLink = document.getElementById("authURL");
       const getAuthURL =
         "https://mlzydonigl.execute-api.eu-central-1.amazonaws.com/dev/api/get-auth-url";
 
-      getURLElement.onclick = function () {
+      getCodeElement.onclick = function () {
         fetch(getAuthURL)
           .then(function (response) {
             return response.json();
