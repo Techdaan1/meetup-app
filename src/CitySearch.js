@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 class CitySearch extends Component {
   render() {
-    return <div></div>;
+    return <div className="CitySearch"></div>;
   }
 }
 
