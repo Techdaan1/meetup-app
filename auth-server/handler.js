@@ -112,9 +112,7 @@ module.exports.getCalendarEvents = async (event) => {
         headers: {
           "Access-Control-Allow-Origin": "*",
         },
-        body: JSON.stringify({
-          events: results.data.items,
-        }),
+        body: JSON.stringify({ events: results.data.items }),
       };
     })
     .catch((err) => {
