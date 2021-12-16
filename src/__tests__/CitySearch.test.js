@@ -15,7 +15,7 @@ describe("<CitySearch /> component", () => {
     expect(CitySearchWrapper.find(".city")).toHaveLength(1);
   });
 
-  test("renders a list of suggestions", () => {
+  test("render a list of suggestions", () => {
     expect(CitySearchWrapper.find(".suggestions")).toHaveLength(1);
   });
 
@@ -66,5 +66,12 @@ describe("<CitySearch /> component", () => {
     const suggestions = CitySearchWrapper.state("suggestions");
     CitySearchWrapper.find(".suggestions li").at(0).simulate("click");
     expect(CitySearchWrapper.state("query")).toBe(suggestions[0]);
+  });
+
+  test("show event suggestions", () => {
+    CitySearchWrapper.setState({
+      showSuggestions: true,
+    });
+    expect(CitySearchWrapper.find(".suggestions")).toHaveLength(1);
   });
 });
