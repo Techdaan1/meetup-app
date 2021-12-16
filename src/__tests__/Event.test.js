@@ -9,19 +9,19 @@ describe("<Event /> component", () => {
     EventWrapper = shallow(<Event event={mockData[1]} />);
   });
 
-  test("Renders summary", () => {
+  test("Render summary", () => {
     expect(EventWrapper.find(".summary")).toHaveLength(1);
   });
 
-  test("Renders location", () => {
+  test("Render location", () => {
     expect(EventWrapper.find(".location")).toHaveLength(1);
   });
 
-  test("Renders date and timezone", () => {
+  test("Render date and timezone", () => {
     expect(EventWrapper.find(".start-date")).toHaveLength(1);
   });
 
-  test("Renders show/hide details button", () => {
+  test("Render show/hide details button", () => {
     expect(EventWrapper.find(".show-details")).toHaveLength(1);
   });
 
