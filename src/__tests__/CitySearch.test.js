@@ -68,7 +68,7 @@ describe("<CitySearch /> component", () => {
     expect(CitySearchWrapper.state("query")).toBe(suggestions[0]);
   });
 
-  test("show event suggestions", () => {
+  test("show event suggestions list", () => {
     CitySearchWrapper.setState({
       showSuggestions: true,
     });
