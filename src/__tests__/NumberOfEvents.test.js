@@ -8,7 +8,7 @@ describe("<NumberOfEvents /> component", () => {
     NumberOfEventsWrapper = shallow(<NumberOfEvents />);
   });
 
-  test("render textbox input", () => {
+  test("render textbox element correctly", () => {
     expect(NumberOfEventsWrapper.find(".newValue")).toHaveLength(1);
   });
 
