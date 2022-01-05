@@ -3,6 +3,7 @@ import "./App.css";
 import "./nprogress.css";
 import EventList from "./EventList";
 import CitySearch from "./CitySearch";
+import NumberOfEvents from "./NumberOfEvents";
 import { extractLocations, getEvents } from "./api";
 
 class App extends Component {
@@ -10,6 +11,22 @@ class App extends Component {
     events: [],
     locations: [],
   };
+
+  componentDidMount() {
+    this.mounted = true;
+    getEvents().then((events) => {
+      if (this.mounted) {
+        this.setState({
+          events: events.slice(0, this.state.NumberOfEvents),
+          locations: extractLocations(events),
+        });
+      }
+    });
+  }
+
+  componentWillUnmount() {
+    this.mounted = false;
+  }
 
   updateEvents = (location) => {
     getEvents().then((events) => {
@@ -22,19 +39,6 @@ class App extends Component {
       });
     });
   };
-
-  componentDidMount() {
-    this.mounted = true;
-    getEvents().then((events) => {
-      if (this.mounted) {
-        this.setState({ events, locations: extractLocations(events) });
-      }
-    });
-  }
-
-  componentWillUnmount() {
-    this.mounted = false;
-  }
 
   render() {
     return (
