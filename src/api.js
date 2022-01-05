@@ -61,8 +61,8 @@ export const getEvents = async () => {
       token;
     const result = await axios.get(url);
     if (result.data) {
-      var locations = extractlocations(result.data.events);
-      localStorage.setItem("lastEvents", JSON.stringify(results.data));
+      var locations = extractLocations(result.data.events);
+      localStorage.setItem("lastEvents", JSON.stringify(result.data));
       localStorage.setItem("locations", JSON.stringify(locations));
       NProgress.done();
       return result.data.events;
