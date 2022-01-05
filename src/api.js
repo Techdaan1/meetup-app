@@ -2,7 +2,6 @@ import { mockData } from "./mock-data";
 import axios from "axios";
 import NProgress from "nprogress";
 
-
 export const extractLocations = (events) => {
   var extractLocations = events.map((event) => event.location);
   var locations = [...new Set(extractLocations)];
@@ -21,28 +20,29 @@ const checkToken = async (accessToken) => {
 
 const removeQuery = () => {
   if (window.history.pushState && window.location.pathname) {
-    var newurl =
-    window.location.protocol + 
-    "//" +
-    window.location.pathname;
+    var newurl = window.location.protocol + "//" + window.location.pathname;
     window.history.pushState("", "", newurl);
   } else {
     newurl = window.location.protocol + "//" + window.location.host;
     window.history.pushState("", "", newurl);
   }
-}
+};
 
 const getToken = async (code) => {
   const encodeCode = encodeURIComponent(code);
-  const { access_token } = await fetch("https://mlzydonigl.execute-api.eu-central-1.amazonaws.com/dev/api/token" + "/" + encodeCode)
-  .then((res) => {
-    return res.json();
-  })
-  .catch((error) => error);
+  const { access_token } = await fetch(
+    "https://mlzydonigl.execute-api.eu-central-1.amazonaws.com/dev/api/token" +
+      "/" +
+      encodeCode
+  )
+    .then((res) => {
+      return res.json();
+    })
+    .catch((error) => error);
   access_token && localStorage.setItem("access_token", access_token);
 
   return access_token;
-}
+};
 
 export const getEvents = async () => {
   NProgress.start();
@@ -50,12 +50,15 @@ export const getEvents = async () => {
   if (window.location.href.startsWith("http://localhost")) {
     NProgress.done();
     return mockData;
-  }    
+  }
   const token = await getAccessToken();
 
   if (token) {
     removeQuery();
-    const url = "https://mlzydonigl.execute-api.eu-central-1.amazonaws.com/dev/api/get-events" + "/" + token;
+    const url =
+      "https://mlzydonigl.execute-api.eu-central-1.amazonaws.com/dev/api/get-events" +
+      "/" +
+      token;
     const result = await axios.get(url);
     if (result.data) {
       var locations = extractlocations(result.data.events);
@@ -65,20 +68,17 @@ export const getEvents = async () => {
       return result.data.events;
     }
   }
-
 };
 
-export const getAccessToken = async () => {
-  const accessToken = localStorage.getItem("access_token");
-  const tokenCheck = accessToken && (await checkToken(accessToken));
-
-  if (!accessToken || tokenCheck.error) {
-    await localStorage.removeItem("access_token");
-    const searchParams = new URLSearchParams(window.locations.search);
-    const code = await searchParams.get(window.location.search);
-    if (!code)
-    const results = await axios.get("https://mlzydonigl.execute-api.eu-central-1.amazonaws.com/dev/api/get-auth-url"),
-    const {authUrl} = results.data;
+if (!accessToken || tokenCheck.error) {
+  await localStorage.removeItem("access_token");
+  const searchParams = new URLSearchParams(window.location.search);
+  const code = await searchParams.get("code");
+  if (!code) {
+    const results = await axios.get(
+      "https://mlzydonigl.execute-api.eu-central-1.amazonaws.com/dev/api/get-auth-url"
+    );
+    const { authUrl } = results.data;
     return (window.location.href = authUrl);
   }
   return code && getToken(code);
