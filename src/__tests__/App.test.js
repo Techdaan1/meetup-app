@@ -9,6 +9,7 @@ import { extractLocations, getEvents } from "../api";
 
 describe("<App /> component", () => {
   let AppWrapper;
+
   beforeAll(() => {
     AppWrapper = shallow(<App />);
   });
@@ -68,6 +69,14 @@ describe("<App /> integration", () => {
     await suggestionItems.at(suggestionItems.length - 1).simulate("click");
     const allEvents = await getEvents();
     expect(AppWrapper.state("events")).toEqual(allEvents);
+    AppWrapper.unmount();
+  });
+
+  test("passes the number of events state", () => {
+    const AppWrapper = mount(<App />);
+    const AppNumberOfEventsState = AppWrapper.state("NumberOfEvents");
+    expect(AppNumberOfEventsState).not.toEqual(undefined);
+    expect(AppWrapper.find(NumberOfEvents).props().numberOfEvents).toEqual(32);
     AppWrapper.unmount();
   });
 });
