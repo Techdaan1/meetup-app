@@ -21,10 +21,10 @@ defineFeature(feature, (test) => {
     });
 
     then(
-      "the user should see the list of upcoming events from all locations.",
+      "the user should see the list of upcoming events from all locations",
       () => {
         AppWrapper.update();
-        expect(AppWrapper.find(".event")).toHaveLength(mockdata.length);
+        expect(AppWrapper.find(".event")).toHaveLength(mockData.length);
       }
     );
   });
