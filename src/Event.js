@@ -36,7 +36,7 @@ class Event extends Component {
               <br />
               <h6 className="about">About Event</h6>
               <a href={event.htmlLink} target="_blank" rel="noreferrer">
-                See deatails on Google calendar
+                See details in Google calendar
               </a>
               <p className="event-description">{event.description}</p>
             </div>
