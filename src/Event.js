@@ -16,7 +16,7 @@ class Event extends Component {
     const { event } = this.props;
     const { collapsed } = this.state;
     return (
-      <div>
+      <div className="event">
         <div className="summary">{event.summary}</div>
         <div className="event-body">
           <p className="start-date">
