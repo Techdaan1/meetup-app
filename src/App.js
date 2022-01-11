@@ -55,6 +55,7 @@ class App extends Component {
           events={this.state.events}
           numberOfEvents={this.state.numberOfEvents}
         />
+        <NumberOfEvents />
       </div>
     );
   }
