@@ -40,7 +40,7 @@ defineFeature(feature, (test) => {
     );
 
     when("the user clicks on the show-details-button of an event", () => {
-      const showDetailsButton = EventWrapper.find(".event .show-details-btn");
+      const showDetailsButton = EventWrapper.find(".show-details-btn");
       showDetailsButton.simulate("click");
     });
 
@@ -61,8 +61,8 @@ defineFeature(feature, (test) => {
     });
 
     when("the user has clicked on hide-details-button", () => {
-      const showDetailsButton = EventWrapper.find(".event .hide-details-btn");
-      showDetailsButton.simulate("click");
+      const HideDetailsButton = EventWrapper.find(".hide-details-btn");
+      HideDetailsButton.simulate("click");
     });
 
     then("the event details will be hidden", () => {
