@@ -1,8 +1,7 @@
 import React from "react";
-import { shallow } from "enzyme";
-import { mockData } from "../mock-data";
-import EventList from "../EventList";
-import Event from "../Event";
+import { shallow, mount } from "enzyme";
+import NumberOfEvents from "../NumberOfEvents";
+import App from "../App";
 import { loadFeature, defineFeature } from "jest-cucumber";
 
 const feature = loadFeature("./src/features/specifyNumberOfEvents.feature");
@@ -15,26 +14,40 @@ defineFeature(feature, (test) => {
   }) => {
     given("the user is on the home page", () => {});
 
+    let NumberOfEventsWrapper;
     when(
       "the user does not specify the number of events they want to see",
-      () => {}
+      () => {
+        NumberOfEventsWrapper = shallow(<NumberOfEvents />);
+      }
     );
 
-    then("the default number of 32 will be", () => {});
+    then("the default number of 32 will be", () => {
+      NumberOfEventsWrapper.setState({ numberOfEvents: 32 });
+    });
   });
 
-  test("User can change the number of events they want to see", ({
+  test("user can change the number of events they want to see", ({
     given,
     when,
     then,
   }) => {
-    given("the user is on the home page", () => {});
+    let AppWrapper;
+    let NumberOfEventsWrapper;
+    given("the user is on the home page", () => {
+      AppWrapper = mount(<App />);
+      NumberOfEventsWrapper = shallow(<NumberOfEvents />);
+      NumberOfEventsWrapper.setState({ numberOfEvents: 32 });
+    });
 
-    when(
-      "the user has specified the number of events they want to see",
-      () => {}
-    );
+    when("the user has specified the number of events they want to see", () => {
+      const eventNumberInput = { target: { value: 6 } };
+      AppWrapper.find(".NumberOfEvents").simulate("change", eventNumberInput);
+      AppWrapper.update();
+    });
 
-    then("that specified number will be shown", () => {});
+    then("that specified number will be shown", () => {
+      expect(AppWrapper.state("numberOfEvents")).toEqual(6);
+    });
   });
 });
