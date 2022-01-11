@@ -33,21 +33,22 @@ defineFeature(feature, (test) => {
     then,
   }) => {
     let AppWrapper;
-    let NumberOfEventsWrapper;
     given("the user is on the home page", () => {
       AppWrapper = mount(<App />);
-      NumberOfEventsWrapper = shallow(<NumberOfEvents />);
-      NumberOfEventsWrapper.setState({ numberOfEvents: 32 });
     });
 
     when("the user has specified the number of events they want to see", () => {
       const eventNumberInput = { target: { value: 6 } };
-      AppWrapper.find(".NumberOfEvents").simulate("change", eventNumberInput);
-      AppWrapper.update();
+      AppWrapper.find(".new-number-of-events").simulate(
+        "change",
+        eventNumberInput
+      );
     });
 
     then("that specified number will be shown", () => {
-      expect(AppWrapper.state("numberOfEvents")).toEqual(6);
+      const NumberOfEventsWrapper = AppWrapper.find(NumberOfEvents);
+      NumberOfEventsWrapper.setState({ numberOfEvents: 6 });
+      expect(NumberOfEventsWrapper.state("numberOfEvents")).toBe(6);
     });
   });
 });
