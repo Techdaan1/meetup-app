@@ -27,3 +27,5 @@ class InfoAlert extends Alert {
     this.color = "blue";
   }
 }
+
+export { InfoAlert };
