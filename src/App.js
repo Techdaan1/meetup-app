@@ -13,7 +13,6 @@ class App extends Component {
     locations: [],
     numberOfEvents: 32,
   };
-
   componentDidMount() {
     this.mounted = true;
     getEvents().then((events) => {
