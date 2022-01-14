@@ -36,9 +36,7 @@ class NumberOfEvents extends Component {
             />
           </Col>
           <Col>
-            <div>
-              <ErrorAlert text={this.state.infoText} />
-            </div>
+            <ErrorAlert text={this.state.infoText} />
           </Col>
         </Row>
       </Container>
