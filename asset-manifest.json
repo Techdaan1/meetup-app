@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/meetup-app/static/css/main.efbecfea.chunk.css",
-    "main.js": "/meetup-app/static/js/main.0e2ff5b8.chunk.js",
-    "main.js.map": "/meetup-app/static/js/main.0e2ff5b8.chunk.js.map",
+    "main.css": "/meetup-app/static/css/main.6d7a6525.chunk.css",
+    "main.js": "/meetup-app/static/js/main.be8334ee.chunk.js",
+    "main.js.map": "/meetup-app/static/js/main.be8334ee.chunk.js.map",
     "runtime-main.js": "/meetup-app/static/js/runtime-main.00e7775b.js",
     "runtime-main.js.map": "/meetup-app/static/js/runtime-main.00e7775b.js.map",
-    "static/js/2.3a0d25f9.chunk.js": "/meetup-app/static/js/2.3a0d25f9.chunk.js",
-    "static/js/2.3a0d25f9.chunk.js.map": "/meetup-app/static/js/2.3a0d25f9.chunk.js.map",
+    "static/js/2.f1db1617.chunk.js": "/meetup-app/static/js/2.f1db1617.chunk.js",
+    "static/js/2.f1db1617.chunk.js.map": "/meetup-app/static/js/2.f1db1617.chunk.js.map",
     "static/js/3.db28c599.chunk.js": "/meetup-app/static/js/3.db28c599.chunk.js",
     "static/js/3.db28c599.chunk.js.map": "/meetup-app/static/js/3.db28c599.chunk.js.map",
     "index.html": "/meetup-app/index.html",
     "service-worker.js": "/meetup-app/service-worker.js",
     "service-worker.js.map": "/meetup-app/service-worker.js.map",
-    "static/css/main.efbecfea.chunk.css.map": "/meetup-app/static/css/main.efbecfea.chunk.css.map",
-    "static/js/2.3a0d25f9.chunk.js.LICENSE.txt": "/meetup-app/static/js/2.3a0d25f9.chunk.js.LICENSE.txt"
+    "static/css/main.6d7a6525.chunk.css.map": "/meetup-app/static/css/main.6d7a6525.chunk.css.map",
+    "static/js/2.f1db1617.chunk.js.LICENSE.txt": "/meetup-app/static/js/2.f1db1617.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.00e7775b.js",
-    "static/js/2.3a0d25f9.chunk.js",
-    "static/css/main.efbecfea.chunk.css",
-    "static/js/main.0e2ff5b8.chunk.js"
+    "static/js/2.f1db1617.chunk.js",
+    "static/css/main.6d7a6525.chunk.css",
+    "static/js/main.be8334ee.chunk.js"
   ]
 }
