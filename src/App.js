@@ -5,7 +5,7 @@ import EventList from "./EventList";
 import CitySearch from "./CitySearch";
 import NumberOfEvents from "./NumberOfEvents";
 import { extractLocations, getEvents, checkToken, getAccessToken } from "./api";
-import { Container, Row, Col, Card } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import WelcomeScreen from "./WelcomeScreen";
 
 class App extends Component {
@@ -81,10 +81,10 @@ class App extends Component {
               updateNumberOfEvents={this.updateNumberOfEvents}
             />
           </Col>
+          <br />
           <Col className="eventlist-col">
-            <Card xs={10} md={4} EventList events={this.state.events} />
+            <EventList events={this.state.events} />
           </Col>
-
           <Col>
             <WelcomeScreen
               showWelcomeScreen={this.state.showWelcomeScreen}
