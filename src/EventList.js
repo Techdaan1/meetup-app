@@ -11,7 +11,7 @@ class EventList extends Component {
         {!navigator.onLine ? (
           <WarningAlert text="bla" />
         ) : (
-          <WarningAlert text="bla" />
+          <WarningAlert text="You are offline! The displayed event list has been loaded from the cache." />
         )}
         <Row className="d-flex justify-content-center eventlist">
           {events.map((event) => (
