@@ -69,14 +69,6 @@ class App extends Component {
     return (
       <Container className="App" fluid>
         <Row>
-          <Col>Row 1</Col>
-          <Col>Row 2</Col>
-        </Row>
-        <Row>
-          <Col>Row 1</Col>
-          <Col>Row 2</Col>
-        </Row>
-        <Row>
           <Col>
             <CitySearch
               locations={this.state.locations}
