@@ -210,3 +210,7 @@ input[type="number"] {
     margin: 0 auto;
   }
 }
+
+.number-of-events {
+  margin-bottom: 20px;
+}
