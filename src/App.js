@@ -5,7 +5,7 @@ import EventList from "./EventList";
 import CitySearch from "./CitySearch";
 import NumberOfEvents from "./NumberOfEvents";
 import { extractLocations, getEvents, checkToken, getAccessToken } from "./api";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Card } from "react-bootstrap";
 import WelcomeScreen from "./WelcomeScreen";
 
 class App extends Component {
@@ -68,8 +68,14 @@ class App extends Component {
 
     return (
       <Container className="App" fluid>
-        <Row>Row 1</Row>
-        <Row>Row 2</Row>
+        <Row>
+          <Col>Row 1</Col>
+          <Col>Row 2</Col>
+        </Row>
+        <Row>
+          <Col>Row 1</Col>
+          <Col>Row 2</Col>
+        </Row>
         <Row>
           <Col>
             <CitySearch
@@ -84,8 +90,9 @@ class App extends Component {
             />
           </Col>
           <Col className="eventlist-col">
-            <EventList events={this.state.events} />
+            <Card xs={10} md={4} EventList events={this.state.events} />
           </Col>
+
           <Col>
             <WelcomeScreen
               showWelcomeScreen={this.state.showWelcomeScreen}
