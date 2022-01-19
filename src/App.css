@@ -214,3 +214,7 @@ input[type="number"] {
 .number-of-events {
   margin-bottom: 20px;
 }
+
+.eventlist-col {
+  margin-top: 40px;
+}
