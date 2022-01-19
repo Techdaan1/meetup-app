@@ -65,8 +65,9 @@ class App extends Component {
   render() {
     if (this.state.showWelcomeScreen === undefined)
       return <div className="App" />;
+
     return (
-      <Container>
+      <Container fluid>
         <div className="App">
           <Row>
             <Col>
