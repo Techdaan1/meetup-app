@@ -67,36 +67,33 @@ class App extends Component {
       return <div className="App" />;
 
     return (
-      <Container fluid>
-        <div className="App">
-          <Row>
-            <Col>
-              <CitySearch
-                locations={this.state.locations}
-                updateEvents={this.updateEvents}
-              />
-            </Col>
-            <Col>
-              <NumberOfEvents
-                numberOfEvents={this.state.numberOfEvents}
-                updateNumberOfEvents={this.updateNumberOfEvents}
-              />
-            </Col>
-          </Row>
-          <Row>
-            <Col>
-              <EventList events={this.state.events} />
-            </Col>
-            <Col>
-              <WelcomeScreen
-                showWelcomeScreen={this.state.showWelcomeScreen}
-                getAccessToken={() => {
-                  getAccessToken();
-                }}
-              />
-            </Col>
-          </Row>
-        </div>
+      <Container className="App" fluid>
+        <Row>
+          <Col>
+            <CitySearch
+              locations={this.state.locations}
+              updateEvents={this.updateEvents}
+            />
+          </Col>
+          <Col>
+            <NumberOfEvents
+              numberOfEvents={this.state.numberOfEvents}
+              updateNumberOfEvents={this.updateNumberOfEvents}
+            />
+          </Col>
+        </Row>
+        <br />
+        <Col sm={12} md={6} lg={4}>
+          <EventList events={this.state.events} />
+        </Col>
+        <Col>
+          <WelcomeScreen
+            showWelcomeScreen={this.state.showWelcomeScreen}
+            getAccessToken={() => {
+              getAccessToken();
+            }}
+          />
+        </Col>
       </Container>
     );
   }
