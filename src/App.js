@@ -83,6 +83,7 @@ class App extends Component {
           </Col>
         </Row>
         <br />
+        <br />
         <Col className="eventlist-col">
           <EventList events={this.state.events} />
         </Col>
