@@ -14,15 +14,15 @@ class EventList extends Component {
           ) : (
             <WarningAlert text="You are offline! The displayed event list has been loaded from the cache." />
           )}
-          <Col>
+          <Row className="d-flex justify-content-center event-list-wrapper">
             <ul className="eventlist">
               {events.map((event) => (
-                <li key={event.id}>
+                <Col sm={12} md={6} lg={4} key={event.id}>
                   <Event event={event} />
-                </li>
+                </Col>
               ))}
             </ul>
-          </Col>
+          </Row>
         </Row>
       </Container>
     );
