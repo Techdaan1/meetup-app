@@ -10,9 +10,9 @@ class EventList extends Component {
       <Container className="eventlist-container">
         <Row>
           {!navigator.onLine ? (
-            <WarningAlert text="You are offline! The displayed event list has been loaded from the cache." />
-          ) : (
             <WarningAlert text="" />
+          ) : (
+            <WarningAlert text="You are offline! The displayed event list has been loaded from the cache." />
           )}
           <Col>
             <ul className="eventlist">
