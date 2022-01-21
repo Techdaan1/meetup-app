@@ -32,7 +32,7 @@ class NumberOfEvents extends Component {
             <input
               type="number"
               className="new-number-of-events"
-              value={this.props.numberOfEvents}
+              value={this.state.numberOfEvents}
               onChange={this.handleInputChanged}
             />
           </Col>
