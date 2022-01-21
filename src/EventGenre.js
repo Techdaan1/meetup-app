@@ -9,6 +9,8 @@ const EventGenre = ({ events }) => {
     { name: "Group D", value: 200 },
   ];
 
+  const getData = () => {};
+
   return (
     <ResponsiveContainer height={400}>
       <PieChart width={400} height={400}>
