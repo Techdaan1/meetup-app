@@ -93,7 +93,7 @@ class App extends Component {
       <Container className="App" fluid>
         <Row>
           <Col>
-            <h1>Meet App</h1>
+            <h1>Meet App test</h1>
             <CitySearch
               locations={this.state.locations}
               updateEvents={this.updateEvents}
