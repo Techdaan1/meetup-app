@@ -16,7 +16,6 @@ class NumberOfEvents extends Component {
       });
     } else {
       this.setState({
-        numberOfEvents: number,
         infoText: "",
       });
     }
