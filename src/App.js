@@ -3,6 +3,7 @@ import "./App.css";
 import "./nprogress.css";
 import EventList from "./EventList";
 import CitySearch from "./CitySearch";
+import EventGenre from "./EventGenre";
 import NumberOfEvents from "./NumberOfEvents";
 import { extractLocations, getEvents, checkToken, getAccessToken } from "./api";
 import { Container, Row, Col } from "react-bootstrap";
@@ -84,6 +85,7 @@ class App extends Component {
   };
 
   render() {
+    const { events } = this.state;
     if (this.state.showWelcomeScreen === undefined)
       return <div className="App" />;
 
@@ -103,8 +105,9 @@ class App extends Component {
               updateNumberOfEvents={this.updateNumberOfEvents}
             />
           </Col>
-          <Col>
+          <Col className="data-vis-wrapper">
             <h4>Events in each city</h4>
+            <EventGenre events={events} />
             <ResponsiveContainer height={400}>
               <ScatterChart
                 margin={{
