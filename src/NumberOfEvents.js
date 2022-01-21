@@ -16,10 +16,10 @@ class NumberOfEvents extends Component {
       });
     } else {
       this.setState({
+        numberOfEvents: number,
         infoText: "",
       });
     }
-    this.props.updateNumberOfEvents(event.target.value);
   };
 
   render() {
