@@ -129,7 +129,6 @@ class App extends Component {
                 <Scatter data={this.getData()} fill="#8884d8" />
               </ScatterChart>
             </ResponsiveContainer>
-            <EventList events={this.state.events} />
           </Col>
           <Col className="eventlist-col">
             <EventList events={this.state.events} />
