@@ -93,18 +93,18 @@ class App extends Component {
     return (
       <Container className="App" fluid>
         <Row>
-          <Col>
-            <h1>Meet App</h1>
+          <h1>Meet App</h1>
+          <Col className="cities-events">
             <CitySearch
               locations={this.state.locations}
               updateEvents={this.updateEvents}
             />
-          </Col>
-          <Col className="number-of-events">
-            <NumberOfEvents
-              numberOfEvents={this.state.numberOfEvents}
-              updateNumberOfEvents={this.updateNumberOfEvents}
-            />
+            <div className="number-of-events">
+              <NumberOfEvents
+                numberOfEvents={this.state.numberOfEvents}
+                updateNumberOfEvents={this.updateNumberOfEvents}
+              />
+            </div>
           </Col>
           <h4>Events in each city</h4>
           <Col className="data-vis-wrapper">
