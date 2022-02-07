@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Event from "./Event";
 import { Container, Row, Col } from "react-bootstrap";
 import { WarningAlert } from "./Alert";
+import "./EventList.css";
 
 class EventList extends Component {
   render() {
