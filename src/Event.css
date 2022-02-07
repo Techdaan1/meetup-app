@@ -1,5 +1,5 @@
 .event {
-  margin: 10px 100px 20px 20px;
+  margin: 10px 150px 20px 150x;
   padding: 10px 10px 35px;
   text-align: left;
   border: 1px solid #fff;
@@ -10,12 +10,14 @@
 
 .summary {
   color: white;
+  padding-bottom: 2px;
 }
 
 .event-body {
   background-color: white;
   color: #020202;
   padding: 20px;
+  margin-left: 0 10px 0 10px;
 }
 .start-date {
   color: #056983;
