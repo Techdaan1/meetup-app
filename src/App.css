@@ -2,6 +2,7 @@
 .App {
   text-align: center;
   background-color: lightgreen;
+  padding: 2% 5%;
 }
 
 .App * {
@@ -76,14 +77,14 @@ input[type="number"] {
   background-color: #bcdcdb;
 }
 
-.event {
+/*.event {
   padding: 10px 10px 35px;
   margin-bottom: 10px;
   text-align: left;
   border: 1px solid #ccc;
   border-radius: 4px;
   position: relative;
-}
+} */
 
 .details-btn {
   position: absolute;
