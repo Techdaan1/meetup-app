@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/meetup-app/static/css/main.8aaadcd7.chunk.css",
-    "main.js": "/meetup-app/static/js/main.adc2fc64.chunk.js",
-    "main.js.map": "/meetup-app/static/js/main.adc2fc64.chunk.js.map",
-    "runtime-main.js": "/meetup-app/static/js/runtime-main.ed603e8d.js",
-    "runtime-main.js.map": "/meetup-app/static/js/runtime-main.ed603e8d.js.map",
-    "static/js/2.d7906c6c.chunk.js": "/meetup-app/static/js/2.d7906c6c.chunk.js",
-    "static/js/2.d7906c6c.chunk.js.map": "/meetup-app/static/js/2.d7906c6c.chunk.js.map",
-    "static/js/3.7f0f4bce.chunk.js": "/meetup-app/static/js/3.7f0f4bce.chunk.js",
-    "static/js/3.7f0f4bce.chunk.js.map": "/meetup-app/static/js/3.7f0f4bce.chunk.js.map",
+    "main.css": "/meetup-app/static/css/main.a05b53c2.chunk.css",
+    "main.js": "/meetup-app/static/js/main.e3345c79.chunk.js",
+    "main.js.map": "/meetup-app/static/js/main.e3345c79.chunk.js.map",
+    "runtime-main.js": "/meetup-app/static/js/runtime-main.76a25dc0.js",
+    "runtime-main.js.map": "/meetup-app/static/js/runtime-main.76a25dc0.js.map",
+    "static/js/2.e84f3edd.chunk.js": "/meetup-app/static/js/2.e84f3edd.chunk.js",
+    "static/js/2.e84f3edd.chunk.js.map": "/meetup-app/static/js/2.e84f3edd.chunk.js.map",
+    "static/js/3.555b2d96.chunk.js": "/meetup-app/static/js/3.555b2d96.chunk.js",
+    "static/js/3.555b2d96.chunk.js.map": "/meetup-app/static/js/3.555b2d96.chunk.js.map",
     "index.html": "/meetup-app/index.html",
     "service-worker.js": "/meetup-app/service-worker.js",
     "service-worker.js.map": "/meetup-app/service-worker.js.map",
-    "static/css/main.8aaadcd7.chunk.css.map": "/meetup-app/static/css/main.8aaadcd7.chunk.css.map",
-    "static/js/2.d7906c6c.chunk.js.LICENSE.txt": "/meetup-app/static/js/2.d7906c6c.chunk.js.LICENSE.txt"
+    "static/css/main.a05b53c2.chunk.css.map": "/meetup-app/static/css/main.a05b53c2.chunk.css.map",
+    "static/js/2.e84f3edd.chunk.js.LICENSE.txt": "/meetup-app/static/js/2.e84f3edd.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.ed603e8d.js",
-    "static/js/2.d7906c6c.chunk.js",
-    "static/css/main.8aaadcd7.chunk.css",
-    "static/js/main.adc2fc64.chunk.js"
+    "static/js/runtime-main.76a25dc0.js",
+    "static/js/2.e84f3edd.chunk.js",
+    "static/css/main.a05b53c2.chunk.css",
+    "static/js/main.e3345c79.chunk.js"
   ]
 }
