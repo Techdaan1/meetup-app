@@ -1,0 +1,32 @@
+.event {
+  margin-top: 10px;
+  padding: 10px 10px 35px;
+  margin-bottom: 20px;
+  text-align: left;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  position: relative;
+}
+
+.summary {
+  color: white;
+}
+
+.event-body {
+  background-color: white;
+  color: #020202;
+}
+.start-date {
+  color: #056983;
+}
+.location {
+  font-size: small;
+  color: #020202;
+}
+
+.about {
+  font-weight: bolder;
+}
+.event-description {
+  color: #020202;
+}
